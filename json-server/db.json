@@ -1,0 +1,125 @@
+{
+  "player": [
+    {
+      "id": 1,
+      "name": "Frinaldi Muhammad Syauqi",
+      "nim": "1207050041",
+      "password": "randomPassword",
+      "email": "frinaldi.syauqi@gmail.com",
+      "phone": "089518928586",
+      "telegram": "frinaldisyauqi"
+    },
+    {
+      "id": 2,
+      "name": "Anonim",
+      "nim": "12070500XX",
+      "password": "randomPassword",
+      "email": "anonim@mail.com",
+      "phone": "081XXXXXXXXX",
+      "telegram": "anonymous"
+    }
+  ],
+  "statistics": [
+    {
+      "id": 1,
+      "grade_points_average": "2.9",
+      "course_credits": "101/144",
+      "defense": "3/5",
+      "ibtitah": "2/3",
+      "player_id": 1
+    },
+    {
+      "id": 2,
+      "grade_points_average": "4.0",
+      "course_credits": "101/144",
+      "defense": "4/5",
+      "ibtitah": "3/3",
+      "player_id": 2
+    }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "course_name": "Pengembangan Aplikasi Web",
+      "course_day": 1,
+      "start_time": "07:00",
+      "end_time": "08:40",
+      "classroom": "409",
+      "building": "Fakultas Saintek",
+      "player_id": 1
+    },
+    {
+      "id": 2,
+      "course_name": "Interaksi Manusia dan Komputer",
+      "course_day": 1,
+      "start_time": "09:30",
+      "end_time": "11:20",
+      "classroom": "401",
+      "building": "Fakultas Saintek",
+      "player_id": 1
+    },
+    {
+      "id": 3,
+      "course_name": "Manajemen Proyek Perangkat Lunak",
+      "course_day": 1,
+      "start_time": "12:40",
+      "end_time": "14:20",
+      "classroom": "402",
+      "building": "Fakultas Saintek",
+      "player_id": 1
+    },
+    {
+      "id": 4,
+      "course_name": "Pengembangan Aplikasi Web",
+      "course_day": 1,
+      "start_time": "07:00",
+      "end_time": "08:40",
+      "classroom": "409",
+      "building": "Fakultas Saintek",
+      "player_id": 2
+    },
+    {
+      "id": 5,
+      "course_name": "Interaksi Manusia dan Komputer",
+      "course_day": 1,
+      "start_time": "09:30",
+      "end_time": "11:20",
+      "classroom": "401",
+      "building": "Fakultas Saintek",
+      "player_id": 2
+    },
+    {
+      "id": 6,
+      "course_name": "Manajemen Proyek Perangkat Lunak",
+      "course_day": 1,
+      "start_time": "12:40",
+      "end_time": "14:20",
+      "classroom": "402",
+      "building": "Fakultas Saintek",
+      "player_id": 2
+    },
+    {
+      "id": 7,
+      "course_name": "Intelegensia Buatan",
+      "course_day": 1,
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "classroom": "412",
+      "building": "Fakultas Saintek",
+      "player_id": 2
+    },
+    {
+      "id": 8,
+      "course_name": "Intelegensia Buatan",
+      "course_day": 1,
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "classroom": "412",
+      "building": "Fakultas Saintek",
+      "player_id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

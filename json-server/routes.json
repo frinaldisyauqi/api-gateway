@@ -1,0 +1,7 @@
+{
+    "/player?id=:id":"/player/:id",
+    "/player/statistics?id=:id":"/statistics/:id",
+    "/player/schedules":"/schedules",
+    "/player/schedules?id=:id":"/schedules?player_id=:id",
+    "/player/schedules/:id":"/schedules/:id"
+}

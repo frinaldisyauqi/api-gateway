@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  nginx:
+    container_name: nginx-proxy-frinaldi
+    image: frinaldisyauqi/nginx-proxy-if
+    ports:
+      - "80:80"
+    extra_hosts:
+        - "docker.out:host-gateway"
+  mockend:
+    container_name: mockend-frinaldi
+    image: frinaldisyauqi/json-server-if
+    volumes:
+      - ~/json-server/db.json:/db.json
+      - ~/json-server/routes.json:/routes.json
+    ports:
+      - "3080:3080"
+    extra_hosts:
+        - "docker.out:host-gateway"
+  krakend:
+    container_name: krakend-frinaldi
+    image: devopsfaith/krakend
+    volumes:
+      - ~/krakend:/etc/krakend
+    ports:
+      - "8080:8080"
+    extra_hosts:
+        - "docker.out:host-gateway"
+    command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]

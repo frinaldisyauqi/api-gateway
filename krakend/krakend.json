@@ -1,0 +1,139 @@
+{
+  "$schema": "https://www.krakend.io/schema/v3.json",
+  "version": 3,
+  "name": "KrakenD - API Gateway",
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "extra_config": {
+    "security/cors": {
+      "allow_origins": ["*"],
+      "allow_methods": ["GET", "HEAD", "POST", "OPTIONS", "PATCH", "DELETE", "PUT"],
+      "debug": true,
+      "router": {
+        "auto_options": true
+      }
+    }
+  },
+  "endpoints": [
+    {
+      "endpoint": "player/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "player?id={id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "host": [
+            "http://docker.out:3080"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": false,
+          "target": "",
+          "deny": [],
+          "allow": []
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    },
+    {
+      "endpoint": "player/statistics/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "player/statistics?id={id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "host": [
+            "http://docker.out:3080"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": false,
+          "target": "",
+          "deny": [],
+          "allow": []
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    },
+    {
+      "endpoint": "player/schedules/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "player/schedules?id={id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "host": [
+            "http://docker.out:3080"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": true,
+          "target": "",
+          "deny": [],
+          "allow": []
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    },
+    {
+      "endpoint": "player/schedules",
+      "method": "POST",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "player/schedules",
+          "encoding": "json",
+          "sd": "static",
+          "method": "POST",
+          "host": [
+            "http://docker.out:3080"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": true,
+          "target": "",
+          "deny": [],
+          "allow": []
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    },
+    {
+      "endpoint": "player/delete/schedules/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "player/schedules/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "DELETE",
+          "host": [
+            "http://docker.out:3080"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": false,
+          "target": "",
+          "deny": [],
+          "allow": []
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    }
+  ]
+}
